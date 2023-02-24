@@ -1,0 +1,25 @@
+start_time     : 1673504901
+last_update    : 1674990096
+fuzzer_pid     : 87819
+cycles_done    : 150
+execs_done     : 384521919
+execs_per_sec  : 6454.27
+paths_total    : 477
+paths_favored  : 82
+paths_found    : 476
+paths_imported : 0
+max_depth      : 17
+cur_path       : 470
+pending_favs   : 0
+pending_total  : 0
+variable_paths : 0
+bitmap_cvg     : 0.61%
+unique_crashes : 47
+unique_hangs   : 18
+last_path      : 1673943631
+last_crash     : 1673849856
+last_hang      : 1673977367
+exec_timeout   : 20
+afl_banner     : xml-parser
+afl_version    : 1.96b
+command_line   : afl-fuzz -i in -o output1 -d -- ./xml-parser @@
