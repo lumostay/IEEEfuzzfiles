@@ -1,0 +1,1765 @@
+ubuntu@ubuntu:~/IEEE-2030.5-Client$ cwtriage -afl -root output1
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000000,sig:11,src:000011+000111,op:splice,rep:2
+SHA1: 0e4f2705a67ad21718d217a318e9782d55b19879
+Classification: PROBABLY_EXPLOITABLE
+Hash: be27fcae77b1eab3e4c917d644ac2a6b.be27fcae77b1eab3e4c917d644ac2a6b
+Command: ./xml-parser output1/crashes/id:000000,sig:11,src:000011+000111,op:splice,rep:2
+Faulting Frame:
+   utf8_encode @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040e729: call 0x414ea8 <__afl_maybe_log>
+   0x000000000040e72e: mov rax,QWORD PTR [rsp+0x10]
+   0x000000000040e733: mov rcx,QWORD PTR [rsp+0x8]
+   0x000000000040e738: mov rdx,QWORD PTR [rsp]
+   0x000000000040e73c: lea rsp,[rsp+0x98]
+=> 0x000000000040e744: mov BYTE PTR [rax],dl
+   0x000000000040e746: add rax,0x1
+   0x000000000040e74a: xchg ax,ax
+   0x000000000040e74c: lea rsp,[rsp-0x98]
+   0x000000000040e754: mov QWORD PTR [rsp],rdx
+Stack Head (5 entries):
+   utf8_encode               @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x0000000000000000 rbx=0x0000000000000000 rcx=0x0000000000000006 rdx=0x000000000000003e 
+rsi=0x0000000000000000 rdi=0x0000000000046596 rbp=0x0000000000000001 rsp=0x00007fffffffd660 
+ r8=0x0000000000619256  r9=0x0000000000056580 r10=0x000000000000003e r11=0x0000000000000046 
+r12=0x0000000000618010 r13=0x0000000100002600 r14=0x000000000000001e r15=0x00000000000000ff 
+rip=0x000000000040e744 efl=0x0000000000010293  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on destination operand
+   Short description: DestAvNearNull (15/22)
+   Explanation: The target crashed on an access violation at an address matching the destination operand of the instruction. This likely indicates a write access violation, which means the attacker may control write address and/or value. However, it there is a chance it could be a NULL dereference.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000001,sig:11,src:000011+000111,op:splice,rep:4
+SHA1: 0ba30f4c0205b5d27062c83d8d1d7388a069de53
+Classification: PROBABLY_EXPLOITABLE
+Hash: be27fcae77b1eab3e4c917d644ac2a6b.be27fcae77b1eab3e4c917d644ac2a6b
+Command: ./xml-parser output1/crashes/id:000001,sig:11,src:000011+000111,op:splice,rep:4
+Faulting Frame:
+   utf8_encode @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040e729: call 0x414ea8 <__afl_maybe_log>
+   0x000000000040e72e: mov rax,QWORD PTR [rsp+0x10]
+   0x000000000040e733: mov rcx,QWORD PTR [rsp+0x8]
+   0x000000000040e738: mov rdx,QWORD PTR [rsp]
+   0x000000000040e73c: lea rsp,[rsp+0x98]
+=> 0x000000000040e744: mov BYTE PTR [rax],dl
+   0x000000000040e746: add rax,0x1
+   0x000000000040e74a: xchg ax,ax
+   0x000000000040e74c: lea rsp,[rsp-0x98]
+   0x000000000040e754: mov QWORD PTR [rsp],rdx
+Stack Head (5 entries):
+   utf8_encode               @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x0000000000000000 rbx=0x0000000000000000 rcx=0x0000000000000006 rdx=0x000000000000003e 
+rsi=0x0000000000000000 rdi=0x0000000000086596 rbp=0x0000000000000001 rsp=0x00007fffffffd660 
+ r8=0x0000000000619258  r9=0x0000000000096580 r10=0x000000000000003e r11=0x0000000000000046 
+r12=0x0000000000618010 r13=0x0000000100002600 r14=0x000000000000001e r15=0x00000000000000ff 
+rip=0x000000000040e744 efl=0x0000000000010293  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on destination operand
+   Short description: DestAvNearNull (15/22)
+   Explanation: The target crashed on an access violation at an address matching the destination operand of the instruction. This likely indicates a write access violation, which means the attacker may control write address and/or value. However, it there is a chance it could be a NULL dereference.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000002,sig:11,src:000055,op:havoc,rep:4
+SHA1: 67dc4ec9a6099119e0e54aebca556e7398c56d02
+Classification: PROBABLY_EXPLOITABLE
+Hash: be27fcae77b1eab3e4c917d644ac2a6b.be27fcae77b1eab3e4c917d644ac2a6b
+Command: ./xml-parser output1/crashes/id:000002,sig:11,src:000055,op:havoc,rep:4
+Faulting Frame:
+   utf8_encode @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040e729: call 0x414ea8 <__afl_maybe_log>
+   0x000000000040e72e: mov rax,QWORD PTR [rsp+0x10]
+   0x000000000040e733: mov rcx,QWORD PTR [rsp+0x8]
+   0x000000000040e738: mov rdx,QWORD PTR [rsp]
+   0x000000000040e73c: lea rsp,[rsp+0x98]
+=> 0x000000000040e744: mov BYTE PTR [rax],dl
+   0x000000000040e746: add rax,0x1
+   0x000000000040e74a: xchg ax,ax
+   0x000000000040e74c: lea rsp,[rsp-0x98]
+   0x000000000040e754: mov QWORD PTR [rsp],rdx
+Stack Head (5 entries):
+   utf8_encode               @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x0000000000000000 rbx=0x0000000000000000 rcx=0x0000000000000006 rdx=0x0000000000000063 
+rsi=0x0000000000000000 rdi=0x00000000000ca69a rbp=0x0000000000000001 rsp=0x00007fffffffd670 
+ r8=0x0000000000619255  r9=0x00000000000da680 r10=0x0000000000000063 r11=0x0000000000000046 
+r12=0x0000000000618010 r13=0x0000000100002600 r14=0x0000000000000043 r15=0x00000000000000ff 
+rip=0x000000000040e744 efl=0x0000000000010297  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on destination operand
+   Short description: DestAvNearNull (15/22)
+   Explanation: The target crashed on an access violation at an address matching the destination operand of the instruction. This likely indicates a write access violation, which means the attacker may control write address and/or value. However, it there is a chance it could be a NULL dereference.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000003,sig:11,src:000085+000134,op:splice,rep:2
+SHA1: 528b8e0d8bdd509404bcf1690778ff2ed9b65ea4
+Classification: PROBABLY_EXPLOITABLE
+Hash: be27fcae77b1eab3e4c917d644ac2a6b.be27fcae77b1eab3e4c917d644ac2a6b
+Command: ./xml-parser output1/crashes/id:000003,sig:11,src:000085+000134,op:splice,rep:2
+Faulting Frame:
+   utf8_encode @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040e729: call 0x414ea8 <__afl_maybe_log>
+   0x000000000040e72e: mov rax,QWORD PTR [rsp+0x10]
+   0x000000000040e733: mov rcx,QWORD PTR [rsp+0x8]
+   0x000000000040e738: mov rdx,QWORD PTR [rsp]
+   0x000000000040e73c: lea rsp,[rsp+0x98]
+=> 0x000000000040e744: mov BYTE PTR [rax],dl
+   0x000000000040e746: add rax,0x1
+   0x000000000040e74a: xchg ax,ax
+   0x000000000040e74c: lea rsp,[rsp-0x98]
+   0x000000000040e754: mov QWORD PTR [rsp],rdx
+Stack Head (5 entries):
+   utf8_encode               @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x0000000000000000 rbx=0x0000000000000000 rcx=0x0000000000000008 rdx=0x000000000000003e 
+rsi=0x0000000000000000 rdi=0x000000000001a757 rbp=0x0000000000000001 rsp=0x00007fffffffd660 
+ r8=0x0000000000619259  r9=0x000000000002a740 r10=0x000000000000003e r11=0x0000000000000048 
+r12=0x0000000000618010 r13=0x0000000100002600 r14=0x000000000000001e r15=0x00000000000000ff 
+rip=0x000000000040e744 efl=0x0000000000010293  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on destination operand
+   Short description: DestAvNearNull (15/22)
+   Explanation: The target crashed on an access violation at an address matching the destination operand of the instruction. This likely indicates a write access violation, which means the attacker may control write address and/or value. However, it there is a chance it could be a NULL dereference.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000004,sig:11,src:000093+000136,op:splice,rep:8
+SHA1: b9e58f8e81da1cb7571e860916dd6681c25725d5
+Classification: PROBABLY_EXPLOITABLE
+Hash: 7bf7ea045bf10f8267cbb70a285270d6.7bf7ea045bf10f8267cbb70a285270d6
+Command: ./xml-parser output1/crashes/id:000004,sig:11,src:000093+000136,op:splice,rep:8
+Faulting Frame:
+   utf8_encode @ 0x000000000040ef13: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040eefc: lea rsp,[rsp+0x98]
+   0x000000000040ef04: mov r14d,edx
+   0x000000000040ef07: lea rbx,[rax+0x1]
+   0x000000000040ef0b: shr r14d,0x6
+   0x000000000040ef0f: or r14d,0xffffffc0
+=> 0x000000000040ef13: mov BYTE PTR [rax],r14b
+   0x000000000040ef16: jmp 0x40ee7e <xml_token+6702>
+   0x000000000040ef1b: nop
+   0x000000000040ef1c: lea rsp,[rsp-0x98]
+   0x000000000040ef24: mov QWORD PTR [rsp],rdx
+Stack Head (5 entries):
+   utf8_encode               @ 0x000000000040ef13: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040ef13: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x0000000000000000 rbx=0x0000000000000001 rcx=0x0000000000000002 rdx=0x00000000000001a1 
+rsi=0x0000000000000000 rdi=0x000000000000003f rbp=0x0000000000000001 rsp=0x00007fffffffd660 
+ r8=0x0000000000619257  r9=0x0000000000000180 r10=0x0000000000000042 r11=0x0000000000000042 
+r12=0x0000000000618010 r13=0x0000000100002600 r14=0x00000000ffffffc6 r15=0x00000000000000ff 
+rip=0x000000000040ef13 efl=0x0000000000010286  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on destination operand
+   Short description: DestAvNearNull (15/22)
+   Explanation: The target crashed on an access violation at an address matching the destination operand of the instruction. This likely indicates a write access violation, which means the attacker may control write address and/or value. However, it there is a chance it could be a NULL dereference.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000005,sig:11,src:000131,op:havoc,rep:2
+SHA1: 9da34e0dbd0b1c64734a7ee3017cb654d88f61fd
+Classification: PROBABLY_EXPLOITABLE
+Hash: be27fcae77b1eab3e4c917d644ac2a6b.be27fcae77b1eab3e4c917d644ac2a6b
+Command: ./xml-parser output1/crashes/id:000005,sig:11,src:000131,op:havoc,rep:2
+Faulting Frame:
+   utf8_encode @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040e729: call 0x414ea8 <__afl_maybe_log>
+   0x000000000040e72e: mov rax,QWORD PTR [rsp+0x10]
+   0x000000000040e733: mov rcx,QWORD PTR [rsp+0x8]
+   0x000000000040e738: mov rdx,QWORD PTR [rsp]
+   0x000000000040e73c: lea rsp,[rsp+0x98]
+=> 0x000000000040e744: mov BYTE PTR [rax],dl
+   0x000000000040e746: add rax,0x1
+   0x000000000040e74a: xchg ax,ax
+   0x000000000040e74c: lea rsp,[rsp-0x98]
+   0x000000000040e754: mov QWORD PTR [rsp],rdx
+Stack Head (5 entries):
+   utf8_encode               @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x0000000000000000 rbx=0x0000000000000000 rcx=0x0000000000000006 rdx=0x000000000000003e 
+rsi=0x0000000000000000 rdi=0x0000000000086598 rbp=0x0000000000000001 rsp=0x00007fffffffd670 
+ r8=0x0000000000619257  r9=0x0000000000096580 r10=0x000000000000003e r11=0x0000000000000046 
+r12=0x0000000000618010 r13=0x0000000100002600 r14=0x000000000000001e r15=0x00000000000000ff 
+rip=0x000000000040e744 efl=0x0000000000010293  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on destination operand
+   Short description: DestAvNearNull (15/22)
+   Explanation: The target crashed on an access violation at an address matching the destination operand of the instruction. This likely indicates a write access violation, which means the attacker may control write address and/or value. However, it there is a chance it could be a NULL dereference.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000006,sig:11,src:000131,op:havoc,rep:4
+SHA1: 0fbb1bcba6e23833d5f1439cfc3a7fde12d05589
+Classification: PROBABLY_EXPLOITABLE
+Hash: 4f0d4984b5e30f21520faa97d5e3659b.4f0d4984b5e30f21520faa97d5e3659b
+Command: ./xml-parser output1/crashes/id:000006,sig:11,src:000131,op:havoc,rep:4
+Faulting Frame:
+   xml_token @ 0x000000000040f102: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040f0e4: mov rdx,QWORD PTR [rsp]
+   0x000000000040f0e8: lea rsp,[rsp+0x98]
+   0x000000000040f0f0: mov r9,QWORD PTR [rsp]
+   0x000000000040f0f4: mov DWORD PTR [r12+0x18],0x2
+   0x000000000040f0fd: mov QWORD PTR [r12+0x10],rbx
+=> 0x000000000040f102: mov BYTE PTR [r9],0x0
+   0x000000000040f106: mov r10,QWORD PTR [rsp]
+   0x000000000040f10a: sub r10,QWORD PTR [r12+0x8]
+   0x000000000040f10f: mov DWORD PTR [r12+0x1c],0x6
+   0x000000000040f118: mov DWORD PTR [r12+0x20],r10d
+Stack Head (4 entries):
+   xml_token                 @ 0x000000000040f102: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x0000000000000005 rbx=0x0000000000619258 rcx=0x0000000000000006 rdx=0x0000000000000061 
+rsi=0x0000000000000000 rdi=0x0000000000086592 rbp=0x0000000000000001 rsp=0x00007fffffffd670 
+ r8=0x0000000000619257  r9=0x0000000000000000 r10=0x0000000000000061 r11=0x0000000000000046 
+r12=0x0000000000618010 r13=0x0000000100002600 r14=0x0000000000619259 r15=0x00000000000000ff 
+rip=0x000000000040f102 efl=0x0000000000010246  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on destination operand
+   Short description: DestAvNearNull (15/22)
+   Explanation: The target crashed on an access violation at an address matching the destination operand of the instruction. This likely indicates a write access violation, which means the attacker may control write address and/or value. However, it there is a chance it could be a NULL dereference.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000007,sig:11,src:000131,op:havoc,rep:4
+SHA1: 54c6d56d991bf34476604e0cb92d21e30620c95d
+Classification: PROBABLY_EXPLOITABLE
+Hash: be27fcae77b1eab3e4c917d644ac2a6b.be27fcae77b1eab3e4c917d644ac2a6b
+Command: ./xml-parser output1/crashes/id:000007,sig:11,src:000131,op:havoc,rep:4
+Faulting Frame:
+   utf8_encode @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040e729: call 0x414ea8 <__afl_maybe_log>
+   0x000000000040e72e: mov rax,QWORD PTR [rsp+0x10]
+   0x000000000040e733: mov rcx,QWORD PTR [rsp+0x8]
+   0x000000000040e738: mov rdx,QWORD PTR [rsp]
+   0x000000000040e73c: lea rsp,[rsp+0x98]
+=> 0x000000000040e744: mov BYTE PTR [rax],dl
+   0x000000000040e746: add rax,0x1
+   0x000000000040e74a: xchg ax,ax
+   0x000000000040e74c: lea rsp,[rsp-0x98]
+   0x000000000040e754: mov QWORD PTR [rsp],rdx
+Stack Head (5 entries):
+   utf8_encode               @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x0000000000000000 rbx=0x0000000000000000 rcx=0x0000000000000006 rdx=0x0000000000000020 
+rsi=0x0000000000000000 rdi=0x0000000000086596 rbp=0x0000000000000001 rsp=0x00007fffffffd670 
+ r8=0x0000000000619255  r9=0x0000000000096580 r10=0x0000000000000020 r11=0x0000000000000046 
+r12=0x0000000000618010 r13=0x0000000100002600 r14=0x0000000000619254 r15=0x00000000000000ff 
+rip=0x000000000040e744 efl=0x0000000000010247  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on destination operand
+   Short description: DestAvNearNull (15/22)
+   Explanation: The target crashed on an access violation at an address matching the destination operand of the instruction. This likely indicates a write access violation, which means the attacker may control write address and/or value. However, it there is a chance it could be a NULL dereference.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000008,sig:11,src:000170,op:havoc,rep:2
+SHA1: 0825cee1459535d9f3a761dd7322480e89ad1778
+Classification: PROBABLY_EXPLOITABLE
+Hash: 92ab21511e2bd59252400b262be5cb56.92ab21511e2bd59252400b262be5cb56
+Command: ./xml-parser output1/crashes/id:000008,sig:11,src:000170,op:havoc,rep:2
+Faulting Frame:
+   utf8_encode @ 0x000000000040f05a: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040f042: mov rax,QWORD PTR [rsp+0x10]
+   0x000000000040f047: mov rcx,QWORD PTR [rsp+0x8]
+   0x000000000040f04c: mov rdx,QWORD PTR [rsp]
+   0x000000000040f050: lea rsp,[rsp+0x98]
+   0x000000000040f058: mov ecx,edx
+=> 0x000000000040f05a: mov BYTE PTR [rax],0xe0
+   0x000000000040f05d: lea rsi,[rax+0x2]
+   0x000000000040f061: shr ecx,0xc
+   0x000000000040f064: or ecx,0xffffff80
+   0x000000000040f067: mov BYTE PTR [rax+0x1],cl
+Stack Head (5 entries):
+   utf8_encode               @ 0x000000000040f05a: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040f05a: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x0000000000000000 rbx=0x0000000000000000 rcx=0x000000000001458b rdx=0x000000000001458b 
+rsi=0x0000000000000000 rdi=0x000000000000458b rbp=0x0000000000000001 rsp=0x00007fffffffd670 
+ r8=0x000000000061925a  r9=0x0000000000014580 r10=0x000000000000658b r11=0x0000000000000048 
+r12=0x0000000000618010 r13=0x0000000100002600 r14=0x000000000001456b r15=0x00000000000000ff 
+rip=0x000000000040f05a efl=0x0000000000010293  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on destination operand
+   Short description: DestAvNearNull (15/22)
+   Explanation: The target crashed on an access violation at an address matching the destination operand of the instruction. This likely indicates a write access violation, which means the attacker may control write address and/or value. However, it there is a chance it could be a NULL dereference.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000009,sig:11,src:000170,op:havoc,rep:2
+SHA1: 3bd052d5a2d41bd29eb149ca502752f5a8c49e39
+Classification: PROBABLY_EXPLOITABLE
+Hash: be27fcae77b1eab3e4c917d644ac2a6b.be27fcae77b1eab3e4c917d644ac2a6b
+Command: ./xml-parser output1/crashes/id:000009,sig:11,src:000170,op:havoc,rep:2
+Faulting Frame:
+   utf8_encode @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040e729: call 0x414ea8 <__afl_maybe_log>
+   0x000000000040e72e: mov rax,QWORD PTR [rsp+0x10]
+   0x000000000040e733: mov rcx,QWORD PTR [rsp+0x8]
+   0x000000000040e738: mov rdx,QWORD PTR [rsp]
+   0x000000000040e73c: lea rsp,[rsp+0x98]
+=> 0x000000000040e744: mov BYTE PTR [rax],dl
+   0x000000000040e746: add rax,0x1
+   0x000000000040e74a: xchg ax,ax
+   0x000000000040e74c: lea rsp,[rsp-0x98]
+   0x000000000040e754: mov QWORD PTR [rsp],rdx
+Stack Head (5 entries):
+   utf8_encode               @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x0000000000000000 rbx=0x0000000000000000 rcx=0x0000000000000008 rdx=0x0000000000000034 
+rsi=0x0000000000619254 rdi=0x000000000002258b rbp=0x0000000000000001 rsp=0x00007fffffffd670 
+ r8=0x000000000061925b  r9=0x0000000000032580 r10=0x0000000000000034 r11=0x0000000000000048 
+r12=0x0000000000618010 r13=0x0000000100002600 r14=0x0000000000000014 r15=0x00000000000000ff 
+rip=0x000000000040e744 efl=0x0000000000010293  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on destination operand
+   Short description: DestAvNearNull (15/22)
+   Explanation: The target crashed on an access violation at an address matching the destination operand of the instruction. This likely indicates a write access violation, which means the attacker may control write address and/or value. However, it there is a chance it could be a NULL dereference.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000010,sig:11,src:000170,op:havoc,rep:8
+SHA1: 66fb8c78b4e2a948481b89a77d92938cb2103ec2
+Classification: PROBABLY_EXPLOITABLE
+Hash: 7bf7ea045bf10f8267cbb70a285270d6.7bf7ea045bf10f8267cbb70a285270d6
+Command: ./xml-parser output1/crashes/id:000010,sig:11,src:000170,op:havoc,rep:8
+Faulting Frame:
+   utf8_encode @ 0x000000000040ef13: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040eefc: lea rsp,[rsp+0x98]
+   0x000000000040ef04: mov r14d,edx
+   0x000000000040ef07: lea rbx,[rax+0x1]
+   0x000000000040ef0b: shr r14d,0x6
+   0x000000000040ef0f: or r14d,0xffffffc0
+=> 0x000000000040ef13: mov BYTE PTR [rax],r14b
+   0x000000000040ef16: jmp 0x40ee7e <xml_token+6702>
+   0x000000000040ef1b: nop
+   0x000000000040ef1c: lea rsp,[rsp-0x98]
+   0x000000000040ef24: mov QWORD PTR [rsp],rdx
+Stack Head (5 entries):
+   utf8_encode               @ 0x000000000040ef13: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040ef13: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x0000000000000000 rbx=0x0000000000000001 rcx=0x0000000000000002 rdx=0x0000000000000694 
+rsi=0x0000000000000000 rdi=0x000000000000003f rbp=0x0000000000000001 rsp=0x00007fffffffd670 
+ r8=0x0000000000619256  r9=0x0000000000000680 r10=0x0000000000000042 r11=0x0000000000000042 
+r12=0x0000000000618010 r13=0x0000000100002600 r14=0x00000000ffffffda r15=0x00000000000000ff 
+rip=0x000000000040ef13 efl=0x0000000000010282  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on destination operand
+   Short description: DestAvNearNull (15/22)
+   Explanation: The target crashed on an access violation at an address matching the destination operand of the instruction. This likely indicates a write access violation, which means the attacker may control write address and/or value. However, it there is a chance it could be a NULL dereference.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000011,sig:11,src:000170,op:havoc,rep:4
+SHA1: 15ebbab5b69183dabda5df47ee49b7bfe128544e
+Classification: PROBABLY_EXPLOITABLE
+Hash: 02cd0803426ada175f4afa6e03549055.02cd0803426ada175f4afa6e03549055
+Command: ./xml-parser output1/crashes/id:000011,sig:11,src:000170,op:havoc,rep:4
+Faulting Frame:
+   utf8_encode @ 0x000000000040ee2b: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040ee14: lea rsp,[rsp+0x98]
+   0x000000000040ee1c: mov r11d,edx
+   0x000000000040ee1f: lea rsi,[rax+0x1]
+   0x000000000040ee23: shr r11d,0xc
+   0x000000000040ee27: or r11d,0xffffffe0
+=> 0x000000000040ee2b: mov BYTE PTR [rax],r11b
+   0x000000000040ee2e: xchg ax,ax
+   0x000000000040ee30: lea rsp,[rsp-0x98]
+   0x000000000040ee38: mov QWORD PTR [rsp],rdx
+   0x000000000040ee3c: mov QWORD PTR [rsp+0x8],rcx
+Stack Head (5 entries):
+   utf8_encode               @ 0x000000000040ee2b: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040ee2b: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x0000000000000000 rbx=0x0000000000000000 rcx=0x0000000000000003 rdx=0x0000000000008516 
+rsi=0x0000000000000001 rdi=0x000000000000001f rbp=0x0000000000000001 rsp=0x00007fffffffd670 
+ r8=0x0000000000619259  r9=0x0000000000008500 r10=0x0000000000000043 r11=0x00000000ffffffe8 
+r12=0x0000000000618010 r13=0x0000000100002600 r14=0x00000000000084f6 r15=0x00000000000000ff 
+rip=0x000000000040ee2b efl=0x0000000000010286  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on destination operand
+   Short description: DestAvNearNull (15/22)
+   Explanation: The target crashed on an access violation at an address matching the destination operand of the instruction. This likely indicates a write access violation, which means the attacker may control write address and/or value. However, it there is a chance it could be a NULL dereference.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000012,sig:11,src:000214,op:havoc,rep:2
+SHA1: a8b5f9403b7aff638cc8dd10935bbe3c5260f155
+Classification: PROBABLY_EXPLOITABLE
+Hash: be27fcae77b1eab3e4c917d644ac2a6b.be27fcae77b1eab3e4c917d644ac2a6b
+Command: ./xml-parser output1/crashes/id:000012,sig:11,src:000214,op:havoc,rep:2
+Faulting Frame:
+   utf8_encode @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040e729: call 0x414ea8 <__afl_maybe_log>
+   0x000000000040e72e: mov rax,QWORD PTR [rsp+0x10]
+   0x000000000040e733: mov rcx,QWORD PTR [rsp+0x8]
+   0x000000000040e738: mov rdx,QWORD PTR [rsp]
+   0x000000000040e73c: lea rsp,[rsp+0x98]
+=> 0x000000000040e744: mov BYTE PTR [rax],dl
+   0x000000000040e746: add rax,0x1
+   0x000000000040e74a: xchg ax,ax
+   0x000000000040e74c: lea rsp,[rsp-0x98]
+   0x000000000040e754: mov QWORD PTR [rsp],rdx
+Stack Head (5 entries):
+   utf8_encode               @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x0000000000000000 rbx=0x0000000000000000 rcx=0x00000000dfffffff rdx=0x0000000000000044 
+rsi=0x000000000000003b rdi=0x00000000ffffffd0 rbp=0x0000000000000001 rsp=0x00007fffffffd670 
+ r8=0x000000000061925d  r9=0x00000000ffffff9f r10=0x0000000000000044 r11=0x0000000000619253 
+r12=0x0000000000618010 r13=0x0000000100002600 r14=0x0000000000000024 r15=0x00000000000000ff 
+rip=0x000000000040e744 efl=0x0000000000010297  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on destination operand
+   Short description: DestAvNearNull (15/22)
+   Explanation: The target crashed on an access violation at an address matching the destination operand of the instruction. This likely indicates a write access violation, which means the attacker may control write address and/or value. However, it there is a chance it could be a NULL dereference.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000013,sig:11,src:000214,op:havoc,rep:2
+SHA1: b39c270dfb7804347a6f0f7608ec754e405b506b
+Classification: PROBABLY_EXPLOITABLE
+Hash: be27fcae77b1eab3e4c917d644ac2a6b.be27fcae77b1eab3e4c917d644ac2a6b
+Command: ./xml-parser output1/crashes/id:000013,sig:11,src:000214,op:havoc,rep:2
+Faulting Frame:
+   utf8_encode @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040e729: call 0x414ea8 <__afl_maybe_log>
+   0x000000000040e72e: mov rax,QWORD PTR [rsp+0x10]
+   0x000000000040e733: mov rcx,QWORD PTR [rsp+0x8]
+   0x000000000040e738: mov rdx,QWORD PTR [rsp]
+   0x000000000040e73c: lea rsp,[rsp+0x98]
+=> 0x000000000040e744: mov BYTE PTR [rax],dl
+   0x000000000040e746: add rax,0x1
+   0x000000000040e74a: xchg ax,ax
+   0x000000000040e74c: lea rsp,[rsp-0x98]
+   0x000000000040e754: mov QWORD PTR [rsp],rdx
+Stack Head (5 entries):
+   utf8_encode               @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x0000000000000000 rbx=0x0000000000000000 rcx=0x0000000099999999 rdx=0x0000000000000040 
+rsi=0x000000000000003b rdi=0x00000000ffffffd0 rbp=0x0000000000000001 rsp=0x00007fffffffd670 
+ r8=0x000000000061925f  r9=0x00000000ffffff9f r10=0x0000000000000040 r11=0x0000000000619253 
+r12=0x0000000000618010 r13=0x0000000100002600 r14=0x0000000000000020 r15=0x00000000000000ff 
+rip=0x000000000040e744 efl=0x0000000000010293  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on destination operand
+   Short description: DestAvNearNull (15/22)
+   Explanation: The target crashed on an access violation at an address matching the destination operand of the instruction. This likely indicates a write access violation, which means the attacker may control write address and/or value. However, it there is a chance it could be a NULL dereference.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000014,sig:11,src:000229,op:havoc,rep:2
+SHA1: b6c068478cfb00578356a0442b1c7e09e2b2dc64
+Classification: PROBABLY_EXPLOITABLE
+Hash: 4f0d4984b5e30f21520faa97d5e3659b.4f0d4984b5e30f21520faa97d5e3659b
+Command: ./xml-parser output1/crashes/id:000014,sig:11,src:000229,op:havoc,rep:2
+Faulting Frame:
+   xml_token @ 0x000000000040f102: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040f0e4: mov rdx,QWORD PTR [rsp]
+   0x000000000040f0e8: lea rsp,[rsp+0x98]
+   0x000000000040f0f0: mov r9,QWORD PTR [rsp]
+   0x000000000040f0f4: mov DWORD PTR [r12+0x18],0x2
+   0x000000000040f0fd: mov QWORD PTR [r12+0x10],rbx
+=> 0x000000000040f102: mov BYTE PTR [r9],0x0
+   0x000000000040f106: mov r10,QWORD PTR [rsp]
+   0x000000000040f10a: sub r10,QWORD PTR [r12+0x8]
+   0x000000000040f10f: mov DWORD PTR [r12+0x1c],0x6
+   0x000000000040f118: mov DWORD PTR [r12+0x20],r10d
+Stack Head (4 entries):
+   xml_token                 @ 0x000000000040f102: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x0000000000000005 rbx=0x000000000061925d rcx=0x00000000ddbbbbbb rdx=0x000000000000003a 
+rsi=0x000000000000003b rdi=0x00000000ffffffd0 rbp=0x0000000000000001 rsp=0x00007fffffffd670 
+ r8=0x00000000ffffffbf  r9=0x0000000000000000 r10=0x000000000000003a r11=0x0000000000619253 
+r12=0x0000000000618010 r13=0x0000000100002600 r14=0x000000000061925e r15=0x00000000000000ff 
+rip=0x000000000040f102 efl=0x0000000000010246  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on destination operand
+   Short description: DestAvNearNull (15/22)
+   Explanation: The target crashed on an access violation at an address matching the destination operand of the instruction. This likely indicates a write access violation, which means the attacker may control write address and/or value. However, it there is a chance it could be a NULL dereference.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000015,sig:11,src:000229,op:havoc,rep:2
+SHA1: 2e0db854e1e0a3482b25928c2d7128a35120062b
+Classification: PROBABLY_EXPLOITABLE
+Hash: be27fcae77b1eab3e4c917d644ac2a6b.be27fcae77b1eab3e4c917d644ac2a6b
+Command: ./xml-parser output1/crashes/id:000015,sig:11,src:000229,op:havoc,rep:2
+Faulting Frame:
+   utf8_encode @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040e729: call 0x414ea8 <__afl_maybe_log>
+   0x000000000040e72e: mov rax,QWORD PTR [rsp+0x10]
+   0x000000000040e733: mov rcx,QWORD PTR [rsp+0x8]
+   0x000000000040e738: mov rdx,QWORD PTR [rsp]
+   0x000000000040e73c: lea rsp,[rsp+0x98]
+=> 0x000000000040e744: mov BYTE PTR [rax],dl
+   0x000000000040e746: add rax,0x1
+   0x000000000040e74a: xchg ax,ax
+   0x000000000040e74c: lea rsp,[rsp-0x98]
+   0x000000000040e754: mov QWORD PTR [rsp],rdx
+Stack Head (5 entries):
+   utf8_encode               @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x0000000000000000 rbx=0x0000000000000000 rcx=0x00000000dbbbbbbb rdx=0x000000000000003a 
+rsi=0x000000000000003b rdi=0x00000000ffffffd0 rbp=0x0000000000000001 rsp=0x00007fffffffd670 
+ r8=0x0000000000619265  r9=0x00000000ffffff9f r10=0x000000000000003a r11=0x000000000061925b 
+r12=0x0000000000618010 r13=0x0000000100002600 r14=0x000000000000001a r15=0x00000000000000ff 
+rip=0x000000000040e744 efl=0x0000000000010297  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on destination operand
+   Short description: DestAvNearNull (15/22)
+   Explanation: The target crashed on an access violation at an address matching the destination operand of the instruction. This likely indicates a write access violation, which means the attacker may control write address and/or value. However, it there is a chance it could be a NULL dereference.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000016,sig:11,src:000234,op:havoc,rep:4
+SHA1: 6d48354a0bf07ee50135d3e53e227b844775e174
+Classification: PROBABLY_EXPLOITABLE
+Hash: be27fcae77b1eab3e4c917d644ac2a6b.be27fcae77b1eab3e4c917d644ac2a6b
+Command: ./xml-parser output1/crashes/id:000016,sig:11,src:000234,op:havoc,rep:4
+Faulting Frame:
+   utf8_encode @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040e729: call 0x414ea8 <__afl_maybe_log>
+   0x000000000040e72e: mov rax,QWORD PTR [rsp+0x10]
+   0x000000000040e733: mov rcx,QWORD PTR [rsp+0x8]
+   0x000000000040e738: mov rdx,QWORD PTR [rsp]
+   0x000000000040e73c: lea rsp,[rsp+0x98]
+=> 0x000000000040e744: mov BYTE PTR [rax],dl
+   0x000000000040e746: add rax,0x1
+   0x000000000040e74a: xchg ax,ax
+   0x000000000040e74c: lea rsp,[rsp-0x98]
+   0x000000000040e754: mov QWORD PTR [rsp],rdx
+Stack Head (5 entries):
+   utf8_encode               @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x0000000000000000 rbx=0x0000000000000000 rcx=0x00000000dbbbbbbb rdx=0x0000000000000062 
+rsi=0x000000000000003b rdi=0x00000000ffffffd0 rbp=0x0000000000000001 rsp=0x00007fffffffd670 
+ r8=0x0000000000619262  r9=0x00000000ffffff9f r10=0x0000000000000062 r11=0x0000000000619258 
+r12=0x0000000000618010 r13=0x0000000100002600 r14=0x0000000000000042 r15=0x00000000000000ff 
+rip=0x000000000040e744 efl=0x0000000000010293  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on destination operand
+   Short description: DestAvNearNull (15/22)
+   Explanation: The target crashed on an access violation at an address matching the destination operand of the instruction. This likely indicates a write access violation, which means the attacker may control write address and/or value. However, it there is a chance it could be a NULL dereference.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000017,sig:11,src:000234,op:havoc,rep:4
+SHA1: 99c6c2603d681678ce7def8ca54ee45f6d377975
+Classification: PROBABLY_EXPLOITABLE
+Hash: 26d1911c5380a3fc44b12409cd371905.8817bfc94049e9b6229e2587026d0875
+Command: ./xml-parser output1/crashes/id:000017,sig:11,src:000234,op:havoc,rep:4
+Faulting Frame:
+   utf8_encode @ 0x000000000040b2f4: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040b2e0: lea rsp,[rsp+0x98]
+   0x000000000040b2e8: mov esi,ecx
+   0x000000000040b2ea: lea r11,[r10+0x1]
+   0x000000000040b2ee: shr esi,0xc
+   0x000000000040b2f1: or esi,0xffffffe0
+=> 0x000000000040b2f4: mov BYTE PTR [r10],sil
+   0x000000000040b2f7: nop
+   0x000000000040b2f8: lea rsp,[rsp-0x98]
+   0x000000000040b300: mov QWORD PTR [rsp],rdx
+   0x000000000040b304: mov QWORD PTR [rsp+0x8],rcx
+Stack Head (6 entries):
+   utf8_encode               @ 0x000000000040b2f4: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_reference             @ 0x000000000040b2f4: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040e3cb: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x0000000000000000 rbx=0x0000000000619274 rcx=0x000000000000dbbb rdx=0x0000000000000000 
+rsi=0x00000000ffffffed rdi=0x00000000ffffffd0 rbp=0x00007fffffffd670 rsp=0x00007fffffffd610 
+ r8=0x00000000ffffffbf  r9=0x00000000ffffff9f r10=0x0000000000000000 r11=0x0000000000000001 
+r12=0x0000000000000004 r13=0x0000000100002600 r14=0x000000000061926c r15=0x00000000000000ff 
+rip=0x000000000040b2f4 efl=0x0000000000010286  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on destination operand
+   Short description: DestAvNearNull (15/22)
+   Explanation: The target crashed on an access violation at an address matching the destination operand of the instruction. This likely indicates a write access violation, which means the attacker may control write address and/or value. However, it there is a chance it could be a NULL dereference.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000018,sig:11,src:000234,op:havoc,rep:2
+SHA1: 8f057feeb833a19db8424935052a5388a4b7d8ef
+Classification: PROBABLY_EXPLOITABLE
+Hash: be27fcae77b1eab3e4c917d644ac2a6b.be27fcae77b1eab3e4c917d644ac2a6b
+Command: ./xml-parser output1/crashes/id:000018,sig:11,src:000234,op:havoc,rep:2
+Faulting Frame:
+   utf8_encode @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040e729: call 0x414ea8 <__afl_maybe_log>
+   0x000000000040e72e: mov rax,QWORD PTR [rsp+0x10]
+   0x000000000040e733: mov rcx,QWORD PTR [rsp+0x8]
+   0x000000000040e738: mov rdx,QWORD PTR [rsp]
+   0x000000000040e73c: lea rsp,[rsp+0x98]
+=> 0x000000000040e744: mov BYTE PTR [rax],dl
+   0x000000000040e746: add rax,0x1
+   0x000000000040e74a: xchg ax,ax
+   0x000000000040e74c: lea rsp,[rsp-0x98]
+   0x000000000040e754: mov QWORD PTR [rsp],rdx
+Stack Head (5 entries):
+   utf8_encode               @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x0000000000000000 rbx=0x0000000000000000 rcx=0x00000000dbbbbbbb rdx=0x0000000000000062 
+rsi=0x000000000000003b rdi=0x00000000ffffffd0 rbp=0x0000000000000001 rsp=0x00007fffffffd670 
+ r8=0x0000000000619263  r9=0x00000000ffffff9f r10=0x0000000000000062 r11=0x0000000000619259 
+r12=0x0000000000618010 r13=0x0000000100002600 r14=0x0000000000000042 r15=0x00000000000000ff 
+rip=0x000000000040e744 efl=0x0000000000010293  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on destination operand
+   Short description: DestAvNearNull (15/22)
+   Explanation: The target crashed on an access violation at an address matching the destination operand of the instruction. This likely indicates a write access violation, which means the attacker may control write address and/or value. However, it there is a chance it could be a NULL dereference.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000019,sig:11,src:000073+000231,op:splice,rep:2
+SHA1: 9b046d2082587cb36ae2a501db640f4505cb29e6
+Classification: PROBABLY_EXPLOITABLE
+Hash: be27fcae77b1eab3e4c917d644ac2a6b.be27fcae77b1eab3e4c917d644ac2a6b
+Command: ./xml-parser output1/crashes/id:000019,sig:11,src:000073+000231,op:splice,rep:2
+Faulting Frame:
+   utf8_encode @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040e729: call 0x414ea8 <__afl_maybe_log>
+   0x000000000040e72e: mov rax,QWORD PTR [rsp+0x10]
+   0x000000000040e733: mov rcx,QWORD PTR [rsp+0x8]
+   0x000000000040e738: mov rdx,QWORD PTR [rsp]
+   0x000000000040e73c: lea rsp,[rsp+0x98]
+=> 0x000000000040e744: mov BYTE PTR [rax],dl
+   0x000000000040e746: add rax,0x1
+   0x000000000040e74a: xchg ax,ax
+   0x000000000040e74c: lea rsp,[rsp-0x98]
+   0x000000000040e754: mov QWORD PTR [rsp],rdx
+Stack Head (5 entries):
+   utf8_encode               @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x0000000000000000 rbx=0x0000000000000000 rcx=0x0000000000988988 rdx=0x0000000000000078 
+rsi=0x000000000000003b rdi=0x00000000ffffffd0 rbp=0x0000000000000001 rsp=0x00007fffffffd660 
+ r8=0x0000000000619262  r9=0x00000000ffffff9f r10=0x0000000000000078 r11=0x000000000061925a 
+r12=0x0000000000618010 r13=0x0000000100002600 r14=0x0000000000000058 r15=0x00000000000000ff 
+rip=0x000000000040e744 efl=0x0000000000010297  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on destination operand
+   Short description: DestAvNearNull (15/22)
+   Explanation: The target crashed on an access violation at an address matching the destination operand of the instruction. This likely indicates a write access violation, which means the attacker may control write address and/or value. However, it there is a chance it could be a NULL dereference.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000020,sig:11,src:000249,op:havoc,rep:2
+SHA1: db849197da09bb7efa570f2dc28ed12c0857a2c0
+Classification: PROBABLY_EXPLOITABLE
+Hash: f70fe0c0e03d27a11b249f729f5fe4e0.5bb974726e5973b71cbf6a25ec9e88e7
+Command: ./xml-parser output1/crashes/id:000020,sig:11,src:000249,op:havoc,rep:2
+Faulting Frame:
+   att_value @ 0x000000000040c5da: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040c5c0: lea rsp,[rsp+0x98]
+   0x000000000040c5c8: mov rdx,QWORD PTR [rsp+0x10]
+   0x000000000040c5cd: lea rsi,[rax+0x1]
+   0x000000000040c5d1: lea rdi,[rdx+0x1]
+   0x000000000040c5d5: mov QWORD PTR [rsp+0x10],rdi
+=> 0x000000000040c5da: mov BYTE PTR [rdx],r10b
+   0x000000000040c5dd: movsx eax,BYTE PTR [rax]
+   0x000000000040c5e0: test eax,eax
+   0x000000000040c5e2: mov r10d,eax
+   0x000000000040c5e5: jne 0x40c444 <xml_attributes+1252>
+Stack Head (7 entries):
+   att_value                 @ 0x000000000040c5da: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_attributes            @ 0x000000000040c5da: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_tag                   @ 0x000000000040d239: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040f1b7: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x000000000061926c rbx=0x0000000000000000 rcx=0x00000000cccccc88 rdx=0x0000000000000000 
+rsi=0x000000000061926d rdi=0x0000000000000001 rbp=0x0000000000618038 rsp=0x00007fffffffd5f0 
+ r8=0x0000000000619256  r9=0x0000000000000027 r10=0x0000000000000026 r11=0x0000000000619260 
+r12=0x0000000000619253 r13=0x0000000100002600 r14=0x0000000000000001 r15=0x0000000000619254 
+rip=0x000000000040c5da efl=0x0000000000010206  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on destination operand
+   Short description: DestAvNearNull (15/22)
+   Explanation: The target crashed on an access violation at an address matching the destination operand of the instruction. This likely indicates a write access violation, which means the attacker may control write address and/or value. However, it there is a chance it could be a NULL dereference.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000021,sig:11,src:000252,op:havoc,rep:2
+SHA1: 7a168b02881ca1bd573b645956e0d640dee8d7d1
+Classification: PROBABLY_EXPLOITABLE
+Hash: f70fe0c0e03d27a11b249f729f5fe4e0.5bb974726e5973b71cbf6a25ec9e88e7
+Command: ./xml-parser output1/crashes/id:000021,sig:11,src:000252,op:havoc,rep:2
+Faulting Frame:
+   att_value @ 0x000000000040c5da: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040c5c0: lea rsp,[rsp+0x98]
+   0x000000000040c5c8: mov rdx,QWORD PTR [rsp+0x10]
+   0x000000000040c5cd: lea rsi,[rax+0x1]
+   0x000000000040c5d1: lea rdi,[rdx+0x1]
+   0x000000000040c5d5: mov QWORD PTR [rsp+0x10],rdi
+=> 0x000000000040c5da: mov BYTE PTR [rdx],r10b
+   0x000000000040c5dd: movsx eax,BYTE PTR [rax]
+   0x000000000040c5e0: test eax,eax
+   0x000000000040c5e2: mov r10d,eax
+   0x000000000040c5e5: jne 0x40c444 <xml_attributes+1252>
+Stack Head (7 entries):
+   att_value                 @ 0x000000000040c5da: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_attributes            @ 0x000000000040c5da: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_tag                   @ 0x000000000040d239: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040f1b7: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x0000000000619260 rbx=0x0000000000000000 rcx=0x0000000000098988 rdx=0x0000000000000000 
+rsi=0x0000000000619261 rdi=0x0000000000000001 rbp=0x0000000000618038 rsp=0x00007fffffffd5f0 
+ r8=0x0000000000619257  r9=0x0000000000000022 r10=0x0000000000000026 r11=0x000000000061925a 
+r12=0x0000000000619253 r13=0x0000000100002600 r14=0x0000000000000001 r15=0x0000000000619255 
+rip=0x000000000040c5da efl=0x0000000000010206  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on destination operand
+   Short description: DestAvNearNull (15/22)
+   Explanation: The target crashed on an access violation at an address matching the destination operand of the instruction. This likely indicates a write access violation, which means the attacker may control write address and/or value. However, it there is a chance it could be a NULL dereference.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000022,sig:11,src:000252,op:havoc,rep:4
+SHA1: 8c791aad57d30a7f0fae4fb5a65ff54b718d08a7
+Classification: PROBABLY_EXPLOITABLE
+Hash: f70fe0c0e03d27a11b249f729f5fe4e0.5bb974726e5973b71cbf6a25ec9e88e7
+Command: ./xml-parser output1/crashes/id:000022,sig:11,src:000252,op:havoc,rep:4
+Faulting Frame:
+   att_value @ 0x000000000040c5da: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040c5c0: lea rsp,[rsp+0x98]
+   0x000000000040c5c8: mov rdx,QWORD PTR [rsp+0x10]
+   0x000000000040c5cd: lea rsi,[rax+0x1]
+   0x000000000040c5d1: lea rdi,[rdx+0x1]
+   0x000000000040c5d5: mov QWORD PTR [rsp+0x10],rdi
+=> 0x000000000040c5da: mov BYTE PTR [rdx],r10b
+   0x000000000040c5dd: movsx eax,BYTE PTR [rax]
+   0x000000000040c5e0: test eax,eax
+   0x000000000040c5e2: mov r10d,eax
+   0x000000000040c5e5: jne 0x40c444 <xml_attributes+1252>
+Stack Head (7 entries):
+   att_value                 @ 0x000000000040c5da: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_attributes            @ 0x000000000040c5da: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_tag                   @ 0x000000000040d239: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040f1b7: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x000000000061926c rbx=0x0000000000000000 rcx=0x0000000000098988 rdx=0x0000000000000000 
+rsi=0x000000000061926d rdi=0x0000000000000001 rbp=0x0000000000618038 rsp=0x00007fffffffd5f0 
+ r8=0x0000000000619256  r9=0x0000000000000027 r10=0x0000000000000026 r11=0x0000000000619266 
+r12=0x0000000000619253 r13=0x0000000100002600 r14=0x0000000000000001 r15=0x0000000000619254 
+rip=0x000000000040c5da efl=0x0000000000010206  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on destination operand
+   Short description: DestAvNearNull (15/22)
+   Explanation: The target crashed on an access violation at an address matching the destination operand of the instruction. This likely indicates a write access violation, which means the attacker may control write address and/or value. However, it there is a chance it could be a NULL dereference.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000023,sig:11,src:000258,op:havoc,rep:2
+SHA1: c6a6430f758558f19164d3b4b8076cc580f1f410
+Classification: PROBABLY_EXPLOITABLE
+Hash: f70fe0c0e03d27a11b249f729f5fe4e0.5bb974726e5973b71cbf6a25ec9e88e7
+Command: ./xml-parser output1/crashes/id:000023,sig:11,src:000258,op:havoc,rep:2
+Faulting Frame:
+   att_value @ 0x000000000040c5da: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040c5c0: lea rsp,[rsp+0x98]
+   0x000000000040c5c8: mov rdx,QWORD PTR [rsp+0x10]
+   0x000000000040c5cd: lea rsi,[rax+0x1]
+   0x000000000040c5d1: lea rdi,[rdx+0x1]
+   0x000000000040c5d5: mov QWORD PTR [rsp+0x10],rdi
+=> 0x000000000040c5da: mov BYTE PTR [rdx],r10b
+   0x000000000040c5dd: movsx eax,BYTE PTR [rax]
+   0x000000000040c5e0: test eax,eax
+   0x000000000040c5e2: mov r10d,eax
+   0x000000000040c5e5: jne 0x40c444 <xml_attributes+1252>
+Stack Head (7 entries):
+   att_value                 @ 0x000000000040c5da: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_attributes            @ 0x000000000040c5da: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_tag                   @ 0x000000000040d239: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040f1b7: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x000000000061926a rbx=0x0000000000000000 rcx=0x0000000011111188 rdx=0x0000000000000000 
+rsi=0x000000000061926b rdi=0x0000000000000001 rbp=0x0000000000618038 rsp=0x00007fffffffd5f0 
+ r8=0x0000000000619256  r9=0x0000000000000027 r10=0x0000000000000026 r11=0x000000000061925b 
+r12=0x0000000000619253 r13=0x0000000100002600 r14=0x0000000000000001 r15=0x0000000000619254 
+rip=0x000000000040c5da efl=0x0000000000010206  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on destination operand
+   Short description: DestAvNearNull (15/22)
+   Explanation: The target crashed on an access violation at an address matching the destination operand of the instruction. This likely indicates a write access violation, which means the attacker may control write address and/or value. However, it there is a chance it could be a NULL dereference.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000024,sig:11,src:000261,op:havoc,rep:4
+SHA1: 255442ccb5d8e4c9aca4edc5055241c3da5ce605
+Classification: PROBABLY_EXPLOITABLE
+Hash: f70fe0c0e03d27a11b249f729f5fe4e0.5bb974726e5973b71cbf6a25ec9e88e7
+Command: ./xml-parser output1/crashes/id:000024,sig:11,src:000261,op:havoc,rep:4
+Faulting Frame:
+   att_value @ 0x000000000040c5da: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040c5c0: lea rsp,[rsp+0x98]
+   0x000000000040c5c8: mov rdx,QWORD PTR [rsp+0x10]
+   0x000000000040c5cd: lea rsi,[rax+0x1]
+   0x000000000040c5d1: lea rdi,[rdx+0x1]
+   0x000000000040c5d5: mov QWORD PTR [rsp+0x10],rdi
+=> 0x000000000040c5da: mov BYTE PTR [rdx],r10b
+   0x000000000040c5dd: movsx eax,BYTE PTR [rax]
+   0x000000000040c5e0: test eax,eax
+   0x000000000040c5e2: mov r10d,eax
+   0x000000000040c5e5: jne 0x40c444 <xml_attributes+1252>
+Stack Head (7 entries):
+   att_value                 @ 0x000000000040c5da: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_attributes            @ 0x000000000040c5da: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_tag                   @ 0x000000000040d239: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040f1b7: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x0000000000619263 rbx=0x0000000000000000 rcx=0x0000000000988988 rdx=0x0000000000000000 
+rsi=0x0000000000619264 rdi=0x0000000000000001 rbp=0x0000000000618038 rsp=0x00007fffffffd5f0 
+ r8=0x0000000000619257  r9=0x0000000000000027 r10=0x0000000000000026 r11=0x000000000061925c 
+r12=0x0000000000619254 r13=0x0000000100002600 r14=0x0000000000000001 r15=0x0000000000619255 
+rip=0x000000000040c5da efl=0x0000000000010206  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on destination operand
+   Short description: DestAvNearNull (15/22)
+   Explanation: The target crashed on an access violation at an address matching the destination operand of the instruction. This likely indicates a write access violation, which means the attacker may control write address and/or value. However, it there is a chance it could be a NULL dereference.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000025,sig:11,src:000054+000245,op:splice,rep:2
+SHA1: 9d224e8f3fd6d4f9cadd3826f5c958c24a141935
+Classification: PROBABLY_EXPLOITABLE
+Hash: be27fcae77b1eab3e4c917d644ac2a6b.be27fcae77b1eab3e4c917d644ac2a6b
+Command: ./xml-parser output1/crashes/id:000025,sig:11,src:000054+000245,op:splice,rep:2
+Faulting Frame:
+   utf8_encode @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040e729: call 0x414ea8 <__afl_maybe_log>
+   0x000000000040e72e: mov rax,QWORD PTR [rsp+0x10]
+   0x000000000040e733: mov rcx,QWORD PTR [rsp+0x8]
+   0x000000000040e738: mov rdx,QWORD PTR [rsp]
+   0x000000000040e73c: lea rsp,[rsp+0x98]
+=> 0x000000000040e744: mov BYTE PTR [rax],dl
+   0x000000000040e746: add rax,0x1
+   0x000000000040e74a: xchg ax,ax
+   0x000000000040e74c: lea rsp,[rsp-0x98]
+   0x000000000040e754: mov QWORD PTR [rsp],rdx
+Stack Head (5 entries):
+   utf8_encode               @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x0000000000000000 rbx=0x0000000000000000 rcx=0x0000000001bbbbbb rdx=0x000000000000002d 
+rsi=0x000000000000003b rdi=0x00000000ffffffd0 rbp=0x0000000000000001 rsp=0x00007fffffffd660 
+ r8=0x000000000061926f  r9=0x00000000ffffff9f r10=0x000000000000002d r11=0x0000000000619266 
+r12=0x0000000000618010 r13=0x0000000100002600 r14=0x000000000000000d r15=0x00000000000000ff 
+rip=0x000000000040e744 efl=0x0000000000010293  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on destination operand
+   Short description: DestAvNearNull (15/22)
+   Explanation: The target crashed on an access violation at an address matching the destination operand of the instruction. This likely indicates a write access violation, which means the attacker may control write address and/or value. However, it there is a chance it could be a NULL dereference.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000026,sig:11,src:000055+000181,op:splice,rep:4
+SHA1: 38c42151b0a0fb7553364773e415e08a3663af2c
+Classification: PROBABLY_EXPLOITABLE
+Hash: be27fcae77b1eab3e4c917d644ac2a6b.be27fcae77b1eab3e4c917d644ac2a6b
+Command: ./xml-parser output1/crashes/id:000026,sig:11,src:000055+000181,op:splice,rep:4
+Faulting Frame:
+   utf8_encode @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040e729: call 0x414ea8 <__afl_maybe_log>
+   0x000000000040e72e: mov rax,QWORD PTR [rsp+0x10]
+   0x000000000040e733: mov rcx,QWORD PTR [rsp+0x8]
+   0x000000000040e738: mov rdx,QWORD PTR [rsp]
+   0x000000000040e73c: lea rsp,[rsp+0x98]
+=> 0x000000000040e744: mov BYTE PTR [rax],dl
+   0x000000000040e746: add rax,0x1
+   0x000000000040e74a: xchg ax,ax
+   0x000000000040e74c: lea rsp,[rsp-0x98]
+   0x000000000040e754: mov QWORD PTR [rsp],rdx
+Stack Head (5 entries):
+   utf8_encode               @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x0000000000000000 rbx=0x0000000000000000 rcx=0x0000000000000006 rdx=0x000000000000003e 
+rsi=0x0000000000619251 rdi=0x0000000000065596 rbp=0x0000000000000001 rsp=0x00007fffffffd660 
+ r8=0x0000000000619258  r9=0x0000000000075580 r10=0x000000000000003e r11=0x0000000000000046 
+r12=0x0000000000618010 r13=0x0000000100002600 r14=0x000000000000001e r15=0x00000000000000ff 
+rip=0x000000000040e744 efl=0x0000000000010293  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on destination operand
+   Short description: DestAvNearNull (15/22)
+   Explanation: The target crashed on an access violation at an address matching the destination operand of the instruction. This likely indicates a write access violation, which means the attacker may control write address and/or value. However, it there is a chance it could be a NULL dereference.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000027,sig:11,src:000058+000179,op:splice,rep:4
+SHA1: 27319443b699ea819b4966f992452633bbd34c3e
+Classification: PROBABLY_EXPLOITABLE
+Hash: 02cd0803426ada175f4afa6e03549055.02cd0803426ada175f4afa6e03549055
+Command: ./xml-parser output1/crashes/id:000027,sig:11,src:000058+000179,op:splice,rep:4
+Faulting Frame:
+   utf8_encode @ 0x000000000040ee2b: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040ee14: lea rsp,[rsp+0x98]
+   0x000000000040ee1c: mov r11d,edx
+   0x000000000040ee1f: lea rsi,[rax+0x1]
+   0x000000000040ee23: shr r11d,0xc
+   0x000000000040ee27: or r11d,0xffffffe0
+=> 0x000000000040ee2b: mov BYTE PTR [rax],r11b
+   0x000000000040ee2e: xchg ax,ax
+   0x000000000040ee30: lea rsp,[rsp-0x98]
+   0x000000000040ee38: mov QWORD PTR [rsp],rdx
+   0x000000000040ee3c: mov QWORD PTR [rsp+0x8],rcx
+Stack Head (5 entries):
+   utf8_encode               @ 0x000000000040ee2b: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040ee2b: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x0000000000000000 rbx=0x0000000000000000 rcx=0x0000000000000003 rdx=0x000000000000f90a 
+rsi=0x0000000000000001 rdi=0x000000000000001f rbp=0x0000000000000001 rsp=0x00007fffffffd660 
+ r8=0x0000000000619260  r9=0x000000000000f900 r10=0x000000000000190a r11=0x00000000ffffffef 
+r12=0x0000000000618010 r13=0x0000000100002600 r14=0x000000000000f8ea r15=0x00000000000000ff 
+rip=0x000000000040ee2b efl=0x0000000000010282  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on destination operand
+   Short description: DestAvNearNull (15/22)
+   Explanation: The target crashed on an access violation at an address matching the destination operand of the instruction. This likely indicates a write access violation, which means the attacker may control write address and/or value. However, it there is a chance it could be a NULL dereference.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000028,sig:11,src:000310+000295,op:splice,rep:2
+SHA1: 4512c19bb8128cfd2ae38b1460cbae5fac8fa366
+Classification: PROBABLY_EXPLOITABLE
+Hash: be27fcae77b1eab3e4c917d644ac2a6b.be27fcae77b1eab3e4c917d644ac2a6b
+Command: ./xml-parser output1/crashes/id:000028,sig:11,src:000310+000295,op:splice,rep:2
+Faulting Frame:
+   utf8_encode @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040e729: call 0x414ea8 <__afl_maybe_log>
+   0x000000000040e72e: mov rax,QWORD PTR [rsp+0x10]
+   0x000000000040e733: mov rcx,QWORD PTR [rsp+0x8]
+   0x000000000040e738: mov rdx,QWORD PTR [rsp]
+   0x000000000040e73c: lea rsp,[rsp+0x98]
+=> 0x000000000040e744: mov BYTE PTR [rax],dl
+   0x000000000040e746: add rax,0x1
+   0x000000000040e74a: xchg ax,ax
+   0x000000000040e74c: lea rsp,[rsp-0x98]
+   0x000000000040e754: mov QWORD PTR [rsp],rdx
+Stack Head (5 entries):
+   utf8_encode               @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x0000000000000000 rbx=0x0000000000000000 rcx=0x00000000bbbbbbbb rdx=0x0000000000000042 
+rsi=0x000000000000003b rdi=0x00000000ffffffd0 rbp=0x0000000000000001 rsp=0x00007fffffffd660 
+ r8=0x00000000006192f8  r9=0x00000000ffffff9f r10=0x0000000000000042 r11=0x00000000006192cd 
+r12=0x0000000000618010 r13=0x0000000100002600 r14=0x0000000000000022 r15=0x00000000000000ff 
+rip=0x000000000040e744 efl=0x0000000000010297  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on destination operand
+   Short description: DestAvNearNull (15/22)
+   Explanation: The target crashed on an access violation at an address matching the destination operand of the instruction. This likely indicates a write access violation, which means the attacker may control write address and/or value. However, it there is a chance it could be a NULL dereference.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000029,sig:11,src:000316+000270,op:splice,rep:2
+SHA1: d6f1ad6eb6fd7cfac4d74cb98e123047c65fb7b7
+Classification: PROBABLY_EXPLOITABLE
+Hash: be27fcae77b1eab3e4c917d644ac2a6b.be27fcae77b1eab3e4c917d644ac2a6b
+Command: ./xml-parser output1/crashes/id:000029,sig:11,src:000316+000270,op:splice,rep:2
+Faulting Frame:
+   utf8_encode @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040e729: call 0x414ea8 <__afl_maybe_log>
+   0x000000000040e72e: mov rax,QWORD PTR [rsp+0x10]
+   0x000000000040e733: mov rcx,QWORD PTR [rsp+0x8]
+   0x000000000040e738: mov rdx,QWORD PTR [rsp]
+   0x000000000040e73c: lea rsp,[rsp+0x98]
+=> 0x000000000040e744: mov BYTE PTR [rax],dl
+   0x000000000040e746: add rax,0x1
+   0x000000000040e74a: xchg ax,ax
+   0x000000000040e74c: lea rsp,[rsp-0x98]
+   0x000000000040e754: mov QWORD PTR [rsp],rdx
+Stack Head (5 entries):
+   utf8_encode               @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x0000000000000000 rbx=0x0000000000000000 rcx=0x0000000000988888 rdx=0x000000000000003b 
+rsi=0x000000000000003b rdi=0x00000000ffffffd0 rbp=0x0000000000000001 rsp=0x00007fffffffd660 
+ r8=0x000000000061936f  r9=0x00000000ffffff9f r10=0x000000000000003b r11=0x0000000000619367 
+r12=0x0000000000618010 r13=0x0000000100002600 r14=0x000000000000001b r15=0x00000000000000ff 
+rip=0x000000000040e744 efl=0x0000000000010293  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on destination operand
+   Short description: DestAvNearNull (15/22)
+   Explanation: The target crashed on an access violation at an address matching the destination operand of the instruction. This likely indicates a write access violation, which means the attacker may control write address and/or value. However, it there is a chance it could be a NULL dereference.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000030,sig:11,src:000154+000263,op:splice,rep:4
+SHA1: b8f489ad0ac7cd9ea07ad2ff4455e43fc7b7b3c6
+Classification: PROBABLY_EXPLOITABLE
+Hash: f70fe0c0e03d27a11b249f729f5fe4e0.5bb974726e5973b71cbf6a25ec9e88e7
+Command: ./xml-parser output1/crashes/id:000030,sig:11,src:000154+000263,op:splice,rep:4
+Faulting Frame:
+   att_value @ 0x000000000040c5da: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040c5c0: lea rsp,[rsp+0x98]
+   0x000000000040c5c8: mov rdx,QWORD PTR [rsp+0x10]
+   0x000000000040c5cd: lea rsi,[rax+0x1]
+   0x000000000040c5d1: lea rdi,[rdx+0x1]
+   0x000000000040c5d5: mov QWORD PTR [rsp+0x10],rdi
+=> 0x000000000040c5da: mov BYTE PTR [rdx],r10b
+   0x000000000040c5dd: movsx eax,BYTE PTR [rax]
+   0x000000000040c5e0: test eax,eax
+   0x000000000040c5e2: mov r10d,eax
+   0x000000000040c5e5: jne 0x40c444 <xml_attributes+1252>
+Stack Head (7 entries):
+   att_value                 @ 0x000000000040c5da: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_attributes            @ 0x000000000040c5da: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_tag                   @ 0x000000000040d239: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040f1b7: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x0000000000619280 rbx=0x0000000000000000 rcx=0x0000000000098888 rdx=0x0000000000000000 
+rsi=0x0000000000619281 rdi=0x0000000000000001 rbp=0x0000000000618038 rsp=0x00007fffffffd5e0 
+ r8=0x0000000000619275  r9=0x0000000000000027 r10=0x0000000000000026 r11=0x000000000061927a 
+r12=0x0000000000619253 r13=0x0000000100002600 r14=0x0000000000000001 r15=0x0000000000619273 
+rip=0x000000000040c5da efl=0x0000000000010202  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on destination operand
+   Short description: DestAvNearNull (15/22)
+   Explanation: The target crashed on an access violation at an address matching the destination operand of the instruction. This likely indicates a write access violation, which means the attacker may control write address and/or value. However, it there is a chance it could be a NULL dereference.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000031,sig:11,src:000197+000262,op:splice,rep:2
+SHA1: 73a54f82048ea4df139415718afc18c851ac6834
+Classification: PROBABLY_EXPLOITABLE
+Hash: f70fe0c0e03d27a11b249f729f5fe4e0.5bb974726e5973b71cbf6a25ec9e88e7
+Command: ./xml-parser output1/crashes/id:000031,sig:11,src:000197+000262,op:splice,rep:2
+Faulting Frame:
+   att_value @ 0x000000000040c5da: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040c5c0: lea rsp,[rsp+0x98]
+   0x000000000040c5c8: mov rdx,QWORD PTR [rsp+0x10]
+   0x000000000040c5cd: lea rsi,[rax+0x1]
+   0x000000000040c5d1: lea rdi,[rdx+0x1]
+   0x000000000040c5d5: mov QWORD PTR [rsp+0x10],rdi
+=> 0x000000000040c5da: mov BYTE PTR [rdx],r10b
+   0x000000000040c5dd: movsx eax,BYTE PTR [rax]
+   0x000000000040c5e0: test eax,eax
+   0x000000000040c5e2: mov r10d,eax
+   0x000000000040c5e5: jne 0x40c444 <xml_attributes+1252>
+Stack Head (7 entries):
+   att_value                 @ 0x000000000040c5da: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_attributes            @ 0x000000000040c5da: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_tag                   @ 0x000000000040d239: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040f1b7: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x0000000000619285 rbx=0x0000000000000006 rcx=0x0000000000988988 rdx=0x0000000000000000 
+rsi=0x0000000000619286 rdi=0x0000000000000001 rbp=0x0000000000618038 rsp=0x00007fffffffd5e0 
+ r8=0x000000000061926f  r9=0x0000000000000022 r10=0x0000000000000026 r11=0x000000000061927e 
+r12=0x000000000061926c r13=0x0000000100002600 r14=0x0000000000000001 r15=0x000000000061926d 
+rip=0x000000000040c5da efl=0x0000000000010202  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on destination operand
+   Short description: DestAvNearNull (15/22)
+   Explanation: The target crashed on an access violation at an address matching the destination operand of the instruction. This likely indicates a write access violation, which means the attacker may control write address and/or value. However, it there is a chance it could be a NULL dereference.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000032,sig:11,src:000288+000262,op:splice,rep:2
+SHA1: ff8019b7bf02d8e5e1c4c3d4a5c878073b3dc938
+Classification: PROBABLY_EXPLOITABLE
+Hash: f70fe0c0e03d27a11b249f729f5fe4e0.5bb974726e5973b71cbf6a25ec9e88e7
+Command: ./xml-parser output1/crashes/id:000032,sig:11,src:000288+000262,op:splice,rep:2
+Faulting Frame:
+   att_value @ 0x000000000040c5da: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040c5c0: lea rsp,[rsp+0x98]
+   0x000000000040c5c8: mov rdx,QWORD PTR [rsp+0x10]
+   0x000000000040c5cd: lea rsi,[rax+0x1]
+   0x000000000040c5d1: lea rdi,[rdx+0x1]
+   0x000000000040c5d5: mov QWORD PTR [rsp+0x10],rdi
+=> 0x000000000040c5da: mov BYTE PTR [rdx],r10b
+   0x000000000040c5dd: movsx eax,BYTE PTR [rax]
+   0x000000000040c5e0: test eax,eax
+   0x000000000040c5e2: mov r10d,eax
+   0x000000000040c5e5: jne 0x40c444 <xml_attributes+1252>
+Stack Head (7 entries):
+   att_value                 @ 0x000000000040c5da: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_attributes            @ 0x000000000040c5da: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_tag                   @ 0x000000000040d239: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040f1b7: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x0000000000619291 rbx=0x0000000000000002 rcx=0x0000000000098888 rdx=0x0000000000000000 
+rsi=0x0000000000619292 rdi=0x0000000000000001 rbp=0x0000000000618038 rsp=0x00007fffffffd5e0 
+ r8=0x000000000061925e  r9=0x0000000000000027 r10=0x0000000000000026 r11=0x000000000061928b 
+r12=0x000000000061925b r13=0x0000000100002600 r14=0x0000000000000001 r15=0x000000000061925c 
+rip=0x000000000040c5da efl=0x0000000000010202  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on destination operand
+   Short description: DestAvNearNull (15/22)
+   Explanation: The target crashed on an access violation at an address matching the destination operand of the instruction. This likely indicates a write access violation, which means the attacker may control write address and/or value. However, it there is a chance it could be a NULL dereference.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000033,sig:11,src:000305+000269,op:splice,rep:8
+SHA1: bad682b9f99f0dff22bed753e0fa4adee2d962ff
+Classification: PROBABLY_EXPLOITABLE
+Hash: f70fe0c0e03d27a11b249f729f5fe4e0.5bb974726e5973b71cbf6a25ec9e88e7
+Command: ./xml-parser output1/crashes/id:000033,sig:11,src:000305+000269,op:splice,rep:8
+Faulting Frame:
+   att_value @ 0x000000000040c5da: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040c5c0: lea rsp,[rsp+0x98]
+   0x000000000040c5c8: mov rdx,QWORD PTR [rsp+0x10]
+   0x000000000040c5cd: lea rsi,[rax+0x1]
+   0x000000000040c5d1: lea rdi,[rdx+0x1]
+   0x000000000040c5d5: mov QWORD PTR [rsp+0x10],rdi
+=> 0x000000000040c5da: mov BYTE PTR [rdx],r10b
+   0x000000000040c5dd: movsx eax,BYTE PTR [rax]
+   0x000000000040c5e0: test eax,eax
+   0x000000000040c5e2: mov r10d,eax
+   0x000000000040c5e5: jne 0x40c444 <xml_attributes+1252>
+Stack Head (7 entries):
+   att_value                 @ 0x000000000040c5da: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_attributes            @ 0x000000000040c5da: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_tag                   @ 0x000000000040d239: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040f1b7: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x000000000061927c rbx=0x0000000000000004 rcx=0x0000000000098988 rdx=0x0000000000000000 
+rsi=0x000000000061927d rdi=0x0000000000000001 rbp=0x0000000000618038 rsp=0x00007fffffffd5e0 
+ r8=0x000000000061926a  r9=0x0000000000000022 r10=0x0000000000000026 r11=0x0000000000619276 
+r12=0x0000000000619264 r13=0x0000000100002600 r14=0x0000000000000001 r15=0x0000000000619266 
+rip=0x000000000040c5da efl=0x0000000000010202  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on destination operand
+   Short description: DestAvNearNull (15/22)
+   Explanation: The target crashed on an access violation at an address matching the destination operand of the instruction. This likely indicates a write access violation, which means the attacker may control write address and/or value. However, it there is a chance it could be a NULL dereference.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000034,sig:11,src:000357,op:havoc,rep:2
+SHA1: b4d24e64f8207011b9302b2339e5a4a4f6d7a8fa
+Classification: PROBABLY_EXPLOITABLE
+Hash: f70fe0c0e03d27a11b249f729f5fe4e0.5bb974726e5973b71cbf6a25ec9e88e7
+Command: ./xml-parser output1/crashes/id:000034,sig:11,src:000357,op:havoc,rep:2
+Faulting Frame:
+   att_value @ 0x000000000040c5da: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040c5c0: lea rsp,[rsp+0x98]
+   0x000000000040c5c8: mov rdx,QWORD PTR [rsp+0x10]
+   0x000000000040c5cd: lea rsi,[rax+0x1]
+   0x000000000040c5d1: lea rdi,[rdx+0x1]
+   0x000000000040c5d5: mov QWORD PTR [rsp+0x10],rdi
+=> 0x000000000040c5da: mov BYTE PTR [rdx],r10b
+   0x000000000040c5dd: movsx eax,BYTE PTR [rax]
+   0x000000000040c5e0: test eax,eax
+   0x000000000040c5e2: mov r10d,eax
+   0x000000000040c5e5: jne 0x40c444 <xml_attributes+1252>
+Stack Head (7 entries):
+   att_value                 @ 0x000000000040c5da: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_attributes            @ 0x000000000040c5da: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_tag                   @ 0x000000000040d239: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040f1b7: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x00000000006192c3 rbx=0x0000000000000000 rcx=0x0000000000088988 rdx=0x0000000000000000 
+rsi=0x00000000006192c4 rdi=0x0000000000000001 rbp=0x0000000000618038 rsp=0x00007fffffffd5f0 
+ r8=0x00000000006192b0  r9=0x0000000000000027 r10=0x0000000000000026 r11=0x00000000006192bd 
+r12=0x0000000000619253 r13=0x0000000100002600 r14=0x0000000000000001 r15=0x00000000006192ae 
+rip=0x000000000040c5da efl=0x0000000000010206  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on destination operand
+   Short description: DestAvNearNull (15/22)
+   Explanation: The target crashed on an access violation at an address matching the destination operand of the instruction. This likely indicates a write access violation, which means the attacker may control write address and/or value. However, it there is a chance it could be a NULL dereference.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000035,sig:11,src:000172+000254,op:splice,rep:2
+SHA1: 9afb1a5107cabab08595ae2207c33626d570bc0d
+Classification: PROBABLY_EXPLOITABLE
+Hash: f70fe0c0e03d27a11b249f729f5fe4e0.5bb974726e5973b71cbf6a25ec9e88e7
+Command: ./xml-parser output1/crashes/id:000035,sig:11,src:000172+000254,op:splice,rep:2
+Faulting Frame:
+   att_value @ 0x000000000040c5da: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040c5c0: lea rsp,[rsp+0x98]
+   0x000000000040c5c8: mov rdx,QWORD PTR [rsp+0x10]
+   0x000000000040c5cd: lea rsi,[rax+0x1]
+   0x000000000040c5d1: lea rdi,[rdx+0x1]
+   0x000000000040c5d5: mov QWORD PTR [rsp+0x10],rdi
+=> 0x000000000040c5da: mov BYTE PTR [rdx],r10b
+   0x000000000040c5dd: movsx eax,BYTE PTR [rax]
+   0x000000000040c5e0: test eax,eax
+   0x000000000040c5e2: mov r10d,eax
+   0x000000000040c5e5: jne 0x40c444 <xml_attributes+1252>
+Stack Head (7 entries):
+   att_value                 @ 0x000000000040c5da: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_attributes            @ 0x000000000040c5da: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_tag                   @ 0x000000000040d239: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040f1b7: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x0000000000619268 rbx=0x0000000000000000 rcx=0x0000000000098c8c rdx=0x0000000000000000 
+rsi=0x0000000000619269 rdi=0x0000000000000001 rbp=0x0000000000618038 rsp=0x00007fffffffd5e0 
+ r8=0x0000000000619256  r9=0x0000000000000027 r10=0x0000000000000026 r11=0x0000000000619262 
+r12=0x0000000000619253 r13=0x0000000100002600 r14=0x0000000000000001 r15=0x0000000000619254 
+rip=0x000000000040c5da efl=0x0000000000010202  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on destination operand
+   Short description: DestAvNearNull (15/22)
+   Explanation: The target crashed on an access violation at an address matching the destination operand of the instruction. This likely indicates a write access violation, which means the attacker may control write address and/or value. However, it there is a chance it could be a NULL dereference.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000036,sig:11,src:000394+000286,op:splice,rep:2
+SHA1: 84218ce99038d31a140b6fbe47cd4ede4d2ec00f
+Classification: PROBABLY_EXPLOITABLE
+Hash: f70fe0c0e03d27a11b249f729f5fe4e0.5bb974726e5973b71cbf6a25ec9e88e7
+Command: ./xml-parser output1/crashes/id:000036,sig:11,src:000394+000286,op:splice,rep:2
+Faulting Frame:
+   att_value @ 0x000000000040c5da: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040c5c0: lea rsp,[rsp+0x98]
+   0x000000000040c5c8: mov rdx,QWORD PTR [rsp+0x10]
+   0x000000000040c5cd: lea rsi,[rax+0x1]
+   0x000000000040c5d1: lea rdi,[rdx+0x1]
+   0x000000000040c5d5: mov QWORD PTR [rsp+0x10],rdi
+=> 0x000000000040c5da: mov BYTE PTR [rdx],r10b
+   0x000000000040c5dd: movsx eax,BYTE PTR [rax]
+   0x000000000040c5e0: test eax,eax
+   0x000000000040c5e2: mov r10d,eax
+   0x000000000040c5e5: jne 0x40c444 <xml_attributes+1252>
+Stack Head (7 entries):
+   att_value                 @ 0x000000000040c5da: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_attributes            @ 0x000000000040c5da: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_tag                   @ 0x000000000040d239: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040f1b7: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x00000000006192eb rbx=0x0000000000000008 rcx=0x0000000000098889 rdx=0x0000000000000000 
+rsi=0x00000000006192ec rdi=0x0000000000000001 rbp=0x0000000000618038 rsp=0x00007fffffffd5e0 
+ r8=0x00000000006192cc  r9=0x0000000000000022 r10=0x0000000000000026 r11=0x00000000006192e5 
+r12=0x00000000006192c8 r13=0x0000000100002600 r14=0x0000000000000001 r15=0x00000000006192c9 
+rip=0x000000000040c5da efl=0x0000000000010206  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on destination operand
+   Short description: DestAvNearNull (15/22)
+   Explanation: The target crashed on an access violation at an address matching the destination operand of the instruction. This likely indicates a write access violation, which means the attacker may control write address and/or value. However, it there is a chance it could be a NULL dereference.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000037,sig:11,src:000419+000264,op:splice,rep:2
+SHA1: 7e4a4fdf4898b94635f0248dbaa6cbcc716cd394
+Classification: PROBABLY_EXPLOITABLE
+Hash: be27fcae77b1eab3e4c917d644ac2a6b.be27fcae77b1eab3e4c917d644ac2a6b
+Command: ./xml-parser output1/crashes/id:000037,sig:11,src:000419+000264,op:splice,rep:2
+Faulting Frame:
+   utf8_encode @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040e729: call 0x414ea8 <__afl_maybe_log>
+   0x000000000040e72e: mov rax,QWORD PTR [rsp+0x10]
+   0x000000000040e733: mov rcx,QWORD PTR [rsp+0x8]
+   0x000000000040e738: mov rdx,QWORD PTR [rsp]
+   0x000000000040e73c: lea rsp,[rsp+0x98]
+=> 0x000000000040e744: mov BYTE PTR [rax],dl
+   0x000000000040e746: add rax,0x1
+   0x000000000040e74a: xchg ax,ax
+   0x000000000040e74c: lea rsp,[rsp-0x98]
+   0x000000000040e754: mov QWORD PTR [rsp],rdx
+Stack Head (5 entries):
+   utf8_encode               @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040e744: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x0000000000000000 rbx=0x0000000000000000 rcx=0x0000000000988988 rdx=0x0000000000000043 
+rsi=0x000000000000003b rdi=0x00000000ffffffd0 rbp=0x0000000000000001 rsp=0x00007fffffffd660 
+ r8=0x0000000000619299  r9=0x00000000ffffff9f r10=0x0000000000000043 r11=0x0000000000619291 
+r12=0x0000000000618010 r13=0x0000000100002600 r14=0x0000000000000023 r15=0x00000000000000ff 
+rip=0x000000000040e744 efl=0x0000000000010293  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on destination operand
+   Short description: DestAvNearNull (15/22)
+   Explanation: The target crashed on an access violation at an address matching the destination operand of the instruction. This likely indicates a write access violation, which means the attacker may control write address and/or value. However, it there is a chance it could be a NULL dereference.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000038,sig:11,src:000131+000358,op:splice,rep:2
+SHA1: 38963fb5ac0f40647c0f4c581fbfaa3d0aa74038
+Classification: PROBABLY_EXPLOITABLE
+Hash: f70fe0c0e03d27a11b249f729f5fe4e0.5bb974726e5973b71cbf6a25ec9e88e7
+Command: ./xml-parser output1/crashes/id:000038,sig:11,src:000131+000358,op:splice,rep:2
+Faulting Frame:
+   att_value @ 0x000000000040c5da: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040c5c0: lea rsp,[rsp+0x98]
+   0x000000000040c5c8: mov rdx,QWORD PTR [rsp+0x10]
+   0x000000000040c5cd: lea rsi,[rax+0x1]
+   0x000000000040c5d1: lea rdi,[rdx+0x1]
+   0x000000000040c5d5: mov QWORD PTR [rsp+0x10],rdi
+=> 0x000000000040c5da: mov BYTE PTR [rdx],r10b
+   0x000000000040c5dd: movsx eax,BYTE PTR [rax]
+   0x000000000040c5e0: test eax,eax
+   0x000000000040c5e2: mov r10d,eax
+   0x000000000040c5e5: jne 0x40c444 <xml_attributes+1252>
+Stack Head (7 entries):
+   att_value                 @ 0x000000000040c5da: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_attributes            @ 0x000000000040c5da: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_tag                   @ 0x000000000040d239: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040f1b7: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x00000000006192bd rbx=0x0000000000000000 rcx=0x0000000000098988 rdx=0x0000000000000000 
+rsi=0x00000000006192be rdi=0x0000000000000001 rbp=0x0000000000618038 rsp=0x00007fffffffd5e0 
+ r8=0x00000000006192b0  r9=0x0000000000000027 r10=0x0000000000000026 r11=0x00000000006192b7 
+r12=0x0000000000619253 r13=0x0000000100002600 r14=0x0000000000000001 r15=0x00000000006192ae 
+rip=0x000000000040c5da efl=0x0000000000010206  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on destination operand
+   Short description: DestAvNearNull (15/22)
+   Explanation: The target crashed on an access violation at an address matching the destination operand of the instruction. This likely indicates a write access violation, which means the attacker may control write address and/or value. However, it there is a chance it could be a NULL dereference.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000039,sig:11,src:000467,op:havoc,rep:4
+SHA1: c32bd6eb024d2cbbd91607428344fca3815f77e1
+Classification: PROBABLY_NOT_EXPLOITABLE
+Hash: b48ea13525d372adb67a59abbe3de880.b48ea13525d372adb67a59abbe3de880
+Command: ./xml-parser output1/crashes/id:000039,sig:11,src:000467,op:havoc,rep:4
+Faulting Frame:
+   xml_pi @ 0x000000000040ce48: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040ce2c: lea rsp,[rsp+0x98]
+   0x000000000040ce34: lea rsi,[rax+0x1]
+   0x000000000040ce38: lea rdi,[rbp+0x28]
+   0x000000000040ce3c: mov DWORD PTR [rbp+0x1c],0x3
+   0x000000000040ce43: call 0x40bf60 <xml_attributes>
+=> 0x000000000040ce48: movzx ecx,BYTE PTR [rax]
+   0x000000000040ce4b: cmp cl,0x20
+   0x000000000040ce4e: ja 0x40cf38 <xml_pi+1336>
+   0x000000000040ce54: lea rsp,[rsp-0x98]
+   0x000000000040ce5c: mov QWORD PTR [rsp],rdx
+Stack Head (5 entries):
+   xml_pi                    @ 0x000000000040ce48: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040e09b: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x0000000000000000 rbx=0x0000000100002600 rcx=0x000000000000003c rdx=0x00000000fffffd3c 
+rsi=0x00000000ffffd03b rdi=0x00000000ffff003c rbp=0x0000000000618010 rsp=0x00007fffffffd650 
+ r8=0x0000000000619257  r9=0x00000000ffff024c r10=0x00000000fffffcbd r11=0x00000000ffffe030 
+r12=0x0000000000618010 r13=0x0000000000000000 r14=0x0000000000619252 r15=0x000000000061925d 
+rip=0x000000000040ce48 efl=0x0000000000010206  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on source operand
+   Short description: SourceAvNearNull (16/22)
+   Explanation: The target crashed on an access violation at an address matching the source operand of the current instruction. This likely indicates a read access violation, which may mean the application crashed on a simple NULL dereference to data structure that has no immediate effect on control of the processor.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000040,sig:11,src:000468,op:havoc,rep:2
+SHA1: 87a208f57eee4f3fc681e72d03915e02459609d5
+Classification: PROBABLY_NOT_EXPLOITABLE
+Hash: b48ea13525d372adb67a59abbe3de880.b48ea13525d372adb67a59abbe3de880
+Command: ./xml-parser output1/crashes/id:000040,sig:11,src:000468,op:havoc,rep:2
+Faulting Frame:
+   xml_pi @ 0x000000000040ce48: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040ce2c: lea rsp,[rsp+0x98]
+   0x000000000040ce34: lea rsi,[rax+0x1]
+   0x000000000040ce38: lea rdi,[rbp+0x28]
+   0x000000000040ce3c: mov DWORD PTR [rbp+0x1c],0x3
+   0x000000000040ce43: call 0x40bf60 <xml_attributes>
+=> 0x000000000040ce48: movzx ecx,BYTE PTR [rax]
+   0x000000000040ce4b: cmp cl,0x20
+   0x000000000040ce4e: ja 0x40cf38 <xml_pi+1336>
+   0x000000000040ce54: lea rsp,[rsp-0x98]
+   0x000000000040ce5c: mov QWORD PTR [rsp],rdx
+Stack Head (5 entries):
+   xml_pi                    @ 0x000000000040ce48: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040e09b: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x0000000000000000 rbx=0x0000000100002600 rcx=0x000000000000003c rdx=0x00000000fffffd20 
+rsi=0x00000000ffffd01f rdi=0x00000000ffff0020 rbp=0x0000000000618010 rsp=0x00007fffffffd650 
+ r8=0x000000000061925a  r9=0x0000000000000001 r10=0x00000000fffffca1 r11=0x00000000ffffe014 
+r12=0x0000000000618010 r13=0x0000000000000000 r14=0x0000000000619252 r15=0x0000000000619260 
+rip=0x000000000040ce48 efl=0x0000000000010206  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on source operand
+   Short description: SourceAvNearNull (16/22)
+   Explanation: The target crashed on an access violation at an address matching the source operand of the current instruction. This likely indicates a read access violation, which may mean the application crashed on a simple NULL dereference to data structure that has no immediate effect on control of the processor.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000041,sig:11,src:000468,op:havoc,rep:2
+SHA1: 655b5a093ac9522c41c6a3ef9578e4288fd6dcb0
+Classification: PROBABLY_NOT_EXPLOITABLE
+Hash: b48ea13525d372adb67a59abbe3de880.b48ea13525d372adb67a59abbe3de880
+Command: ./xml-parser output1/crashes/id:000041,sig:11,src:000468,op:havoc,rep:2
+Faulting Frame:
+   xml_pi @ 0x000000000040ce48: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040ce2c: lea rsp,[rsp+0x98]
+   0x000000000040ce34: lea rsi,[rax+0x1]
+   0x000000000040ce38: lea rdi,[rbp+0x28]
+   0x000000000040ce3c: mov DWORD PTR [rbp+0x1c],0x3
+   0x000000000040ce43: call 0x40bf60 <xml_attributes>
+=> 0x000000000040ce48: movzx ecx,BYTE PTR [rax]
+   0x000000000040ce4b: cmp cl,0x20
+   0x000000000040ce4e: ja 0x40cf38 <xml_pi+1336>
+   0x000000000040ce54: lea rsp,[rsp-0x98]
+   0x000000000040ce5c: mov QWORD PTR [rsp],rdx
+Stack Head (5 entries):
+   xml_pi                    @ 0x000000000040ce48: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040e09b: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x0000000000000000 rbx=0x0000000100002600 rcx=0x0000000000000000 rdx=0x00000000fffffd00 
+rsi=0x00000000ffffcfff rdi=0x00000000ffff0000 rbp=0x0000000000618010 rsp=0x00007fffffffd650 
+ r8=0x00000000ffff0700  r9=0x00000000ffff0210 r10=0x00000000fffffc81 r11=0x00000000ffffdff4 
+r12=0x0000000000618010 r13=0x0000000000000000 r14=0x0000000000619252 r15=0x000000000061925b 
+rip=0x000000000040ce48 efl=0x0000000000010206  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on source operand
+   Short description: SourceAvNearNull (16/22)
+   Explanation: The target crashed on an access violation at an address matching the source operand of the current instruction. This likely indicates a read access violation, which may mean the application crashed on a simple NULL dereference to data structure that has no immediate effect on control of the processor.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000042,sig:11,src:000468,op:havoc,rep:2
+SHA1: 26d2785a4cee578806d2855be0ff01c4b7525a60
+Classification: PROBABLY_NOT_EXPLOITABLE
+Hash: b48ea13525d372adb67a59abbe3de880.b48ea13525d372adb67a59abbe3de880
+Command: ./xml-parser output1/crashes/id:000042,sig:11,src:000468,op:havoc,rep:2
+Faulting Frame:
+   xml_pi @ 0x000000000040ce48: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040ce2c: lea rsp,[rsp+0x98]
+   0x000000000040ce34: lea rsi,[rax+0x1]
+   0x000000000040ce38: lea rdi,[rbp+0x28]
+   0x000000000040ce3c: mov DWORD PTR [rbp+0x1c],0x3
+   0x000000000040ce43: call 0x40bf60 <xml_attributes>
+=> 0x000000000040ce48: movzx ecx,BYTE PTR [rax]
+   0x000000000040ce4b: cmp cl,0x20
+   0x000000000040ce4e: ja 0x40cf38 <xml_pi+1336>
+   0x000000000040ce54: lea rsp,[rsp-0x98]
+   0x000000000040ce5c: mov QWORD PTR [rsp],rdx
+Stack Head (5 entries):
+   xml_pi                    @ 0x000000000040ce48: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040e09b: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x0000000000000000 rbx=0x0000000100002600 rcx=0x0000000000000000 rdx=0x00000000fffffd00 
+rsi=0x00000000ffffcfff rdi=0x00000000ffff0000 rbp=0x0000000000618010 rsp=0x00007fffffffd650 
+ r8=0x00000000ffff0700  r9=0x00000000ffff0210 r10=0x00000000fffffc81 r11=0x00000000ffffdff4 
+r12=0x0000000000618010 r13=0x0000000000000000 r14=0x0000000000619252 r15=0x000000000061925b 
+rip=0x000000000040ce48 efl=0x0000000000010206  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on source operand
+   Short description: SourceAvNearNull (16/22)
+   Explanation: The target crashed on an access violation at an address matching the source operand of the current instruction. This likely indicates a read access violation, which may mean the application crashed on a simple NULL dereference to data structure that has no immediate effect on control of the processor.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000043,sig:11,src:000468,op:havoc,rep:2
+SHA1: 79ad4469c8819a07b70f4214a96b21fc957359c9
+Classification: PROBABLY_NOT_EXPLOITABLE
+Hash: b48ea13525d372adb67a59abbe3de880.b48ea13525d372adb67a59abbe3de880
+Command: ./xml-parser output1/crashes/id:000043,sig:11,src:000468,op:havoc,rep:2
+Faulting Frame:
+   xml_pi @ 0x000000000040ce48: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040ce2c: lea rsp,[rsp+0x98]
+   0x000000000040ce34: lea rsi,[rax+0x1]
+   0x000000000040ce38: lea rdi,[rbp+0x28]
+   0x000000000040ce3c: mov DWORD PTR [rbp+0x1c],0x3
+   0x000000000040ce43: call 0x40bf60 <xml_attributes>
+=> 0x000000000040ce48: movzx ecx,BYTE PTR [rax]
+   0x000000000040ce4b: cmp cl,0x20
+   0x000000000040ce4e: ja 0x40cf38 <xml_pi+1336>
+   0x000000000040ce54: lea rsp,[rsp-0x98]
+   0x000000000040ce5c: mov QWORD PTR [rsp],rdx
+Stack Head (5 entries):
+   xml_pi                    @ 0x000000000040ce48: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040e09b: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x0000000000000000 rbx=0x0000000100002600 rcx=0x0000000000000000 rdx=0x00000000fffffd00 
+rsi=0x00000000ffffcfff rdi=0x00000000ffff0000 rbp=0x0000000000618010 rsp=0x00007fffffffd650 
+ r8=0x00000000ffff0700  r9=0x00000000ffff0210 r10=0x00000000fffffc81 r11=0x00000000ffffdff4 
+r12=0x0000000000618010 r13=0x0000000000000000 r14=0x0000000000619252 r15=0x000000000061925b 
+rip=0x000000000040ce48 efl=0x0000000000010206  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on source operand
+   Short description: SourceAvNearNull (16/22)
+   Explanation: The target crashed on an access violation at an address matching the source operand of the current instruction. This likely indicates a read access violation, which may mean the application crashed on a simple NULL dereference to data structure that has no immediate effect on control of the processor.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000044,sig:11,src:000468,op:havoc,rep:2
+SHA1: 5104bfe1f1fc0a1c59fa65920181b47dccaf2e6b
+Classification: PROBABLY_NOT_EXPLOITABLE
+Hash: b48ea13525d372adb67a59abbe3de880.b48ea13525d372adb67a59abbe3de880
+Command: ./xml-parser output1/crashes/id:000044,sig:11,src:000468,op:havoc,rep:2
+Faulting Frame:
+   xml_pi @ 0x000000000040ce48: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040ce2c: lea rsp,[rsp+0x98]
+   0x000000000040ce34: lea rsi,[rax+0x1]
+   0x000000000040ce38: lea rdi,[rbp+0x28]
+   0x000000000040ce3c: mov DWORD PTR [rbp+0x1c],0x3
+   0x000000000040ce43: call 0x40bf60 <xml_attributes>
+=> 0x000000000040ce48: movzx ecx,BYTE PTR [rax]
+   0x000000000040ce4b: cmp cl,0x20
+   0x000000000040ce4e: ja 0x40cf38 <xml_pi+1336>
+   0x000000000040ce54: lea rsp,[rsp-0x98]
+   0x000000000040ce5c: mov QWORD PTR [rsp],rdx
+Stack Head (5 entries):
+   xml_pi                    @ 0x000000000040ce48: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040e09b: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x0000000000000000 rbx=0x0000000100002600 rcx=0x0000000000000000 rdx=0x00000000fffffd00 
+rsi=0x00000000ffffcfff rdi=0x00000000ffff0000 rbp=0x0000000000618010 rsp=0x00007fffffffd650 
+ r8=0x00000000ffff0700  r9=0x00000000ffff0210 r10=0x00000000fffffc81 r11=0x00000000ffffdff4 
+r12=0x0000000000618010 r13=0x0000000000000000 r14=0x0000000000619252 r15=0x000000000061925b 
+rip=0x000000000040ce48 efl=0x0000000000010206  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on source operand
+   Short description: SourceAvNearNull (16/22)
+   Explanation: The target crashed on an access violation at an address matching the source operand of the current instruction. This likely indicates a read access violation, which may mean the application crashed on a simple NULL dereference to data structure that has no immediate effect on control of the processor.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000045,sig:11,src:000470+000468,op:splice,rep:2
+SHA1: fc032a4fa890c69cb9e20c980124a0725fd522b3
+Classification: PROBABLY_NOT_EXPLOITABLE
+Hash: b48ea13525d372adb67a59abbe3de880.b48ea13525d372adb67a59abbe3de880
+Command: ./xml-parser output1/crashes/id:000045,sig:11,src:000470+000468,op:splice,rep:2
+Faulting Frame:
+   xml_pi @ 0x000000000040ce48: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040ce2c: lea rsp,[rsp+0x98]
+   0x000000000040ce34: lea rsi,[rax+0x1]
+   0x000000000040ce38: lea rdi,[rbp+0x28]
+   0x000000000040ce3c: mov DWORD PTR [rbp+0x1c],0x3
+   0x000000000040ce43: call 0x40bf60 <xml_attributes>
+=> 0x000000000040ce48: movzx ecx,BYTE PTR [rax]
+   0x000000000040ce4b: cmp cl,0x20
+   0x000000000040ce4e: ja 0x40cf38 <xml_pi+1336>
+   0x000000000040ce54: lea rsp,[rsp-0x98]
+   0x000000000040ce5c: mov QWORD PTR [rsp],rdx
+Stack Head (5 entries):
+   xml_pi                    @ 0x000000000040ce48: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040e09b: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x0000000000000000 rbx=0x0000000100002600 rcx=0x000000000000003c rdx=0x0000000000000001 
+rsi=0x00000000ffffd03c rdi=0x00000000ffff003d rbp=0x0000000000618010 rsp=0x00007fffffffd640 
+ r8=0x000000000061925a  r9=0x000000000000003c r10=0x0000000000619259 r11=0x0000000000000020 
+r12=0x0000000000618010 r13=0x0000000000000000 r14=0x0000000000619252 r15=0x000000000061925d 
+rip=0x000000000040ce48 efl=0x0000000000010202  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on source operand
+   Short description: SourceAvNearNull (16/22)
+   Explanation: The target crashed on an access violation at an address matching the source operand of the current instruction. This likely indicates a read access violation, which may mean the application crashed on a simple NULL dereference to data structure that has no immediate effect on control of the processor.
+---END SUMMARY---
+---CRASH SUMMARY---
+Filename: output1/crashes/id:000046,sig:11,src:000468,op:havoc,rep:4
+SHA1: c230cc75076176c2155d1178541ec2de95c0d01d
+Classification: PROBABLY_NOT_EXPLOITABLE
+Hash: b48ea13525d372adb67a59abbe3de880.b48ea13525d372adb67a59abbe3de880
+Command: ./xml-parser output1/crashes/id:000046,sig:11,src:000468,op:havoc,rep:4
+Faulting Frame:
+   xml_pi @ 0x000000000040ce48: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Disassembly:
+   0x000000000040ce2c: lea rsp,[rsp+0x98]
+   0x000000000040ce34: lea rsi,[rax+0x1]
+   0x000000000040ce38: lea rdi,[rbp+0x28]
+   0x000000000040ce3c: mov DWORD PTR [rbp+0x1c],0x3
+   0x000000000040ce43: call 0x40bf60 <xml_attributes>
+=> 0x000000000040ce48: movzx ecx,BYTE PTR [rax]
+   0x000000000040ce4b: cmp cl,0x20
+   0x000000000040ce4e: ja 0x40cf38 <xml_pi+1336>
+   0x000000000040ce54: lea rsp,[rsp-0x98]
+   0x000000000040ce5c: mov QWORD PTR [rsp],rdx
+Stack Head (5 entries):
+   xml_pi                    @ 0x000000000040ce48: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   xml_token                 @ 0x000000000040e09b: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_token               @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   parse_text                @ 0x0000000000410b71: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+   main                      @ 0x00000000004010be: in /home/ubuntu/IEEE-2030.5-Client/xml-parser
+Registers:
+rax=0x0000000000000000 rbx=0x0000000100002600 rcx=0x000000000000003d rdx=0x00000000fffffd3d 
+rsi=0x00000000ffffd03c rdi=0x00000000ffff003d rbp=0x0000000000618010 rsp=0x00007fffffffd650 
+ r8=0x000000000061925a  r9=0x0000000000000000 r10=0x0000000000619259 r11=0x0000000000000000 
+r12=0x0000000000618010 r13=0x0000000000000000 r14=0x0000000000619252 r15=0x000000000061925b 
+rip=0x000000000040ce48 efl=0x0000000000010206  cs=0x0000000000000033  ss=0x000000000000002b 
+ ds=0x0000000000000000  es=0x0000000000000000  fs=0x0000000000000000  gs=0x0000000000000000 
+Extra Data:
+   Description: Access violation near NULL on source operand
+   Short description: SourceAvNearNull (16/22)
+   Explanation: The target crashed on an access violation at an address matching the source operand of the current instruction. This likely indicates a read access violation, which may mean the application crashed on a simple NULL dereference to data structure that has no immediate effect on control of the processor.
+---END SUMMARY---
